@@ -3,3 +3,5 @@ node_js:
   - "4.2.2"
 script:
   - npm run build
+notifications:
+  email: false
