@@ -4,12 +4,10 @@
   "description": "Returns a random League of Legends champion art for an IFTTT recipe",
   "main": "lib/server.js",
   "scripts": {
-    "start": "node lib/server.js",
+    "start": "nodemon -q dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir lib",
-    "watch": "parallelshell \"npm run watch:build -s\" \"npm run watch:server -s\"",
-    "watch:build": "nodemon -q -w src/ --exec \"npm run build\"",
-    "watch:server": "nodemon -q lib/server.js"
+    "build": "babel src --out-dir dist",
+    "watch": "nodemon -q -w src/ --exec \"npm run build && npm start\""
   },
   "author": "Djorak",
   "license": "GPL-3.0",
